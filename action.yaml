@@ -1,0 +1,18 @@
+name: "action-zip"
+author: "byteever"
+description: "This GitHub action exposes the zip command for use in building/archiving"
+branding:
+  icon: folder-plus
+  color: gray-dark
+runs:
+  using: "docker"
+  image: "Dockerfile"
+outputs:
+  path:
+    description: 'Build path'
+  zip_path:
+    description: 'Zip file path'
+inputs:
+  filename:
+    description: "See byteever/action-zip README.md for more info"
+    required: false
