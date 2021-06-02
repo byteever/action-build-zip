@@ -10,6 +10,7 @@ LABEL "homepage"="https://github.com/byteever/action-build-zip"
 LABEL "maintainer"="byteever <info@byteever.com>"
 
 RUN apk add zip
+RUN apk add rsync
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
