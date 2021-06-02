@@ -3,7 +3,7 @@
 set -eo
 
 # Set variables
-BUILD_PATH="../build"
+BUILD_PATH="./build"
 
 # If not configured defaults to repository name
 if [ -z "$FILENAME" ]; then
@@ -26,6 +26,10 @@ if [ -r "${GITHUB_WORKSPACE}/.distignore" ]; then
   rsync -rc --exclude-from="$GITHUB_WORKSPACE/.distignore" "$GITHUB_WORKSPACE/" "$DEST_PATH/" --delete --delete-excluded
 else
   rsync -rc "$GITHUB_WORKSPACE/" "$DEST_PATH/" --delete
+fi
+
+if [ -r "${DEST_PATH}/build" ]; then
+  rm -rf "${DEST_PATH}/build"
 fi
 
 echo "➤ Generating zip file..."
