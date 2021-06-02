@@ -1,4 +1,4 @@
-name: "action-zip"
+name: "action-build-zip"
 author: "byteever"
 description: "This GitHub action exposes the zip command for use in building/archiving"
 branding:
