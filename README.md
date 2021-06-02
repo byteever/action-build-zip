@@ -1,4 +1,4 @@
-# Action ZIP
+# Action Build ZIP
 GitHub action that can be used to create zip file using the repository files.
 
 Because of [GitHub Actions limitations](https://docs.github.com/en/actions/creating-actions/about-actions#types-of-actions) container-based actions only work on **Linux**.
@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Generate ZIP
-        uses: byteever/action-zip@master
+        uses: actions/action-build-zip@master
         with:
           filename: 'release.zip'
 ```

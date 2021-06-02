@@ -5,8 +5,8 @@ LABEL "com.github.actions.description"="Create a zip file containing specific fi
 LABEL "com.github.actions.icon"="folder-plus"
 LABEL "com.github.actions.color"="gray-dark"
 
-LABEL "repository"="https://github.com/byteever/action-zip"
-LABEL "homepage"="https://github.com/byteever/action-zip"
+LABEL "repository"="https://github.com/byteever/action-build-zip"
+LABEL "homepage"="https://github.com/byteever/action-build-zip"
 LABEL "maintainer"="byteever <info@byteever.com>"
 
 RUN apk add zip
