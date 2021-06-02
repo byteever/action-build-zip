@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Generate ZIP
-        uses: actions/action-build-zip@master
+        uses: byteever/action-build-zip@master
         with:
           filename: 'release.zip'
 ```
