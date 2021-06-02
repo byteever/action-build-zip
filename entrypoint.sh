@@ -3,7 +3,7 @@
 set -eo
 
 # Set variables
-BUILD_PATH="./build"
+BUILD_PATH="../build"
 
 # If not configured defaults to repository name
 if [ -z "$FILENAME" ]; then
@@ -30,7 +30,7 @@ fi
 
 echo "➤ Generating zip file..."
 cd "$BUILD_PATH" || exit
-zip -r "$$FILENAME}.zip" "$FILENAME/"
+zip -r "${FILENAME}.zip" "$FILENAME/"
 # Set GitHub "zip_path" output
-echo "::set-output name=zip_path::$BUILD_PATH/$$FILENAME}.zip"
+echo "::set-output name=zip_path::$BUILD_PATH/${FILENAME}.zip"
 echo "✓ Zip file generated!"
